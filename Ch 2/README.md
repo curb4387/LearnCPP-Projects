@@ -22,7 +22,7 @@ Modify the program you wrote in #2 so that it uses a header file (named io.h) to
 
 If you compile your program and get errors like one of these:
 
-unresolved external symbol "int __cdecl readNumber(void)" (?readNumber@@YAHXZ)
-undefined reference to `readNumber()'
+  unresolved external symbol "int __cdecl readNumber(void)" (?readNumber@@YAHXZ)
+  undefined reference to `readNumber()'
 
 Then you probably forgot to include io.cpp in your project, so the definitions for readNumber() (and writeAnswer()) aren’t being compiled into your project.
