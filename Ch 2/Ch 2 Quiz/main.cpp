@@ -1,28 +1,15 @@
 #include <iostream>
 
 /*
-	Write a single-file program (named main.cpp) that reads two separate
-	integers from the user, adds them together, and then outputs the
-	answer. The program should use 3 functions:
-		1) function readNumber() to get and return a single integer from user
-		2) function writeAnswer() to output answer. 1 parameter, no return value
-		3) main() to glue above functions together
+	Modify the program you wrote in exercise #1 so that readNumber() and writeAnswer()
+	live in a separate file called “io.cpp”. Use a forward declaration to access them from main().
+
+	If you’re having problems, make sure “io.cpp” is properly added to your project so it gets compiled.
 */
 
-int readNumber()
-{
-	std::cout << "Enter a whole number: ";
-
-	int in_num{};
-	std::cin >> in_num;
-
-	return in_num;
-}
-
-void writeAnswer(int ans)
-{
-	std::cout << "The total is: " << ans;
-}
+// Forward declare function prototypes
+int readNumber();
+void writeAnswer(int);
 
 int main()
 {
