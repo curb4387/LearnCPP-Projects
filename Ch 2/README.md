@@ -1,4 +1,5 @@
-LearnCPP Chapter 2 Quiz, Question 1
+LearnCPP, Chapter 2 Quiz
+Question 1
 
 Write a single-file program (named main.cpp) that reads two separate integers from the user, adds them together, and then outputs the answer.
 
@@ -6,3 +7,22 @@ The program should use three functions:
 1) A function named “readNumber” should be used to get (and return) a single integer from the user.
 2) A function named “writeAnswer” should be used to output the answer. This function should take a single parameter and have no return value.
 3) A main() function should be used to glue the above functions together.
+
+
+Question 2
+
+Modify the program you wrote in exercise #1 so that readNumber() and writeAnswer() live in a separate file called “io.cpp”. Use a forward declaration to access them from main().
+
+If you’re having problems, make sure “io.cpp” is properly added to your project so it gets compiled.
+
+
+Question 3
+
+Modify the program you wrote in #2 so that it uses a header file (named io.h) to access the functions instead of using forward declarations directly in your code (.cpp) files. Make sure your header file uses header guards.
+
+If you compile your program and get errors like one of these:
+
+unresolved external symbol "int __cdecl readNumber(void)" (?readNumber@@YAHXZ)
+undefined reference to `readNumber()'
+
+Then you probably forgot to include io.cpp in your project, so the definitions for readNumber() (and writeAnswer()) aren’t being compiled into your project.
